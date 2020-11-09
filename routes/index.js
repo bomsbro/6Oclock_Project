@@ -8,9 +8,9 @@ var urlJson;
 let client = mysql.createConnection({
   host: 'localhost',
   port: 3306,
-  user: 'votemanager',
-  password: '1234',
-  database: 'vote_db',
+  user: 'dolcetic',
+  password: 'wlcm2dev@',
+  database: 'dolcetic',
   multipleStatements: true,
 });
 
