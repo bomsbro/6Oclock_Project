@@ -6,7 +6,7 @@ var urlJson;
 
 /*connect to mysql*/
 let client = mysql.createConnection({
-  host: 'localhost',
+  host: "10.0.0.1",
   port: 3306,
   user: 'dolcetic',
   password: 'wlcm2dev@',
