@@ -280,14 +280,13 @@
         <input type="radio" id="female" name="chosen" value="1">
         <label for="female">Female</label><br>
       </div>
-
-      <div>말풍선</div>
+      
       <%
-        var man=parseInt(results[0].cnt)-1;
-        var woman=parseInt(results[1].cnt)-1;
+      var c0=parseInt(results[0].cnt)-1;
+      var c1=parseInt(results[1].cnt)-1;
 
-        var propotion= (man/(man+woman))*100;
-        console.log(propotion);
+      var c0Propotion= (c0/(c0+c1))*100;
+      var c1Propotion= (c1/(c0+c1))*100;
       %>
       <div>
         <div class="progress" style="height: 20px;">
@@ -296,8 +295,8 @@
         </div>
       </div>
       <div>
-        <div>남자:<%=man%></div>
-        <div>여자:<%=woman%></div>
+        <div><%=c0Propotion.toFixed(1)%> %</div>
+        <div><%=c1Propotion.toFixed(1)%> %</div>
       </div>
 
       <!-- 모달 버튼 및 모달창 -->
