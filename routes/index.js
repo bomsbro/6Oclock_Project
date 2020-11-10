@@ -20,7 +20,7 @@ router.get('/', function (req, res, next) {
   var chosen = urlJson.query.chosen;
 
   var sql1="insert into VOTE_TB(choose) values("+chosen+");";
-  var sql2="select CHOOSE, count(*) as cnt from VOTE_TB group by choose;";
+  var sql2="select CHOOSE, count(*) as cnt from VOTE_TB group by CHOOSE;";
   var sql;
 
   if (typeof chosen == "undefined"){
