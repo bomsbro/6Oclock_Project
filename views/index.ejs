@@ -14,8 +14,6 @@
   .container-lg,
   .container-xl {
     width: 100%;
-    padding-right: 15px;
-    padding-left: 15px;
     margin-right: auto;
     margin-left: auto;
     background-color: yellowgreen;
@@ -48,16 +46,6 @@
     }
   }
 
-  @media (min-width: 1200px) {
-
-    .container,
-    .container-sm,
-    .container-md,
-    .container-lg,
-    .container-xl {
-      max-width: 1140px;
-    }
-  }
 
   /*********Btn****************/
 
@@ -262,14 +250,26 @@
       transition: none;
     }
   }
+
+  /* for responsive images */
+  img {
+    vertical-align: middle;
+    border-style: none;
+  }
+
+  .img-fluid {
+    width: 100%;
+    height: auto;
+  }
 </style>
 
 <body>
   <!-- Page Content -->
   <div class="container-sm">
     <div>
-      <h1>제목</h1>
-      <h3>가나다라마바사아자차</h3>
+      <img class="img-fluid"
+        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/homemade-bread-horizontal-1547759080.jpg"
+        alt="fluid image">
     </div>
 
 

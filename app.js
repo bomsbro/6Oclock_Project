@@ -4,8 +4,8 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('/home/hosting_users/dolcetic/apps/dolcetic_clockoven/routes/index');
+var usersRouter = require('/home/hosting_users/dolcetic/apps/dolcetic_clockoven/routes/users');
 
 var app = express();
 
