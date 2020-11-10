@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('./app.js');
+var app = require('/home/hosting_users/dolcetic/apps/dolcetic_clockoven/app.js');
 var debug = require('debug')('6-5-project:server');
 var http = require('http');
 
