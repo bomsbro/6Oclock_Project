@@ -19,8 +19,8 @@ router.get('/', function (req, res, next) {
   urlJson=url.parse(req.url, true);
   var chosen = urlJson.query.chosen;
 
-  var sql1="insert into vote_tb(choose) values("+chosen+");";
-  var sql2="select choose, count(*) as cnt from vote_tb group by choose;";
+  var sql1="insert into VOTE_TB(choose) values("+chosen+");";
+  var sql2="select CHOOSE, count(*) as cnt from VOTE_TB group by choose;";
   var sql;
 
   if (typeof chosen == "undefined"){
