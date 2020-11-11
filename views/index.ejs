@@ -100,38 +100,38 @@
   }
 
   .btn-primary {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    color: #000;
+    background-color:#00d17c;
+    border-color: #00d17c;
   }
 
   .btn-primary:hover {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    color: #000;
+    background-color: #00ab66;
+    border-color: #00ab66;
   }
 
   .btn-primary:focus,
   .btn-primary.focus {
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    color: #000;
+    background-color: #00ab66;
+    border-color: #00ab66;
     box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
   }
 
   .btn-primary.disabled,
   .btn-primary:disabled {
-    color: #fff;
-    background-color: #007bff;
-    border-color: #007bff;
+    color: #000;
+    background-color: #00d17c;
+    border-color: #00d17c;
   }
 
   .btn-primary:not(:disabled):not(.disabled):active,
   .btn-primary:not(:disabled):not(.disabled).active,
   .show>.btn-primary.dropdown-toggle {
-    color: #fff;
-    background-color: #0062cc;
-    border-color: #005cbf;
+    color: #000;
+    background-color: #00ab66;
+    border-color: #00ab66;
   }
 
   .btn-primary:not(:disabled):not(.disabled):active:focus,
@@ -226,7 +226,7 @@
     overflow: hidden;
     line-height: 0;
     font-size: 0.75rem;
-    background-color: #e9ecef;
+    background-color: #ff6a70;
     border-radius: 0.25rem;
   }
 
@@ -241,7 +241,7 @@
     color: #fff;
     text-align: center;
     white-space: nowrap;
-    background-color: #007bff;
+    background-color: #ffcd87;
     transition: width 0.6s ease;
   }
 
@@ -261,6 +261,16 @@
     width: 100%;
     height: auto;
   }
+
+   /* floating image */
+   .float-left {
+    float: left;
+  }
+
+  .float-right {
+    float: right;
+  }
+  
 
   /*for left-right div*/
   .lr-wrapper {
@@ -291,38 +301,52 @@
 <body>
   <!-- Page Content -->
   <div class="container-sm">
+    <!-- Main image -->
     <div>
       <img class="img-fluid"
-        src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/homemade-bread-horizontal-1547759080.jpg"
+        src="images/main.png"
         alt="fluid image">
     </div>
-
-
+    
+    <!-- form start -->
     <form action="/" method="get">
-      <div>
-        <input type="radio" id="male" name="chosen" value="0">
+      <!--choose-->
+      <div class="lr-wrapper">
+
+        <div class="float-left ml-15">
+        <input class="rdo" type="radio" id="male" name="chosen" value="0">
         <label for="male">Male</label><br>
-        <input type="radio" id="female" name="chosen" value="1">
+        </div>
+
+
+        <div class="float-right mr-18">
+        <input class="rdo" type="radio" id="female" name="chosen" value="1">
         <label for="female">Female</label><br>
+        </div>
+
       </div>
 
       <%
-      var c0=parseInt(results[0].cnt)-1;
-      var c1=parseInt(results[1].cnt)-1;
+        var c0=parseInt(results[0].cnt)-1;
+        var c1=parseInt(results[1].cnt)-1;
 
-      var c0Propotion= (c0/(c0+c1))*100;
-      var c1Propotion= (c1/(c0+c1))*100;
+        var c0Propotion= (c0/(c0+c1))*100;
+        var c1Propotion= (c1/(c0+c1))*100;
       %>
+
       <div>
-        <div class="progress" style="height: 20px;">
+        <div class="progress" style="height: 25px;">
           <div class="progress-bar" role="progressbar" style="width: <%=c0Propotion%>%;" aria-valuenow="25"
             aria-valuemin="0" aria-valuemax="100"></div>
         </div>
       </div>
-      <div>
-        <div><%=c0Propotion.toFixed(1)%> %</div>
-        <div><%=c1Propotion.toFixed(1)%> %</div>
+
+      <div class="lr-wrapper">
+        <div class="float-left ml-15"><%=c0Propotion.toFixed(1)%> %</div>
+        <div class="float-right mr-18"><%=c1Propotion.toFixed(1)%> %</div>
       </div>
+
+      
 
       <!-- 모달 버튼 및 모달창 -->
       <div>
