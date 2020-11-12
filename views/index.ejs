@@ -308,6 +308,17 @@
   body, span, button, p{
     font-family: 'TmonMonsori';
   }
+
+  .mb-2{
+    margin-bottom: 2px;
+  }
+
+  input{
+            border: none;
+            font-size: 15px;
+            outline: none;
+            text-align: center;
+ }
 </style>
 
 <body>
@@ -375,7 +386,10 @@
             <div>
               <img class="img-fluid" src="images/6시5븐_modal.png" alt="fluid image">
             </div>
+            <button class="btn btn-primary btn-block btn-lg mb-2" type="button" onclick="copy_to_clipboard()">복사하기
+            </button>
             <button type="submit" id="modalConfirmBtn" class="btn btn-primary">닫 기</button>
+            <input  id="myInput" value="http://mzlotteshopping.com/" readonly>
           </div>
         </div>
 
@@ -385,6 +399,13 @@
   </div>
 
   <script>
+    function copy_to_clipboard() {
+      var copyText = document.getElementById("myInput");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("Copy");
+      alert('복사되었습니다, 감사합니다.');
+    }
 
     function frmchk() {
       var chk = document.getElementsByName("chosen");
