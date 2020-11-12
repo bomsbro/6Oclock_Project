@@ -357,15 +357,19 @@
       <!-- 모달 버튼 및 모달창 -->
       <div>
         <!-- Trigger/Open The Modal -->
-        <button type="button" id="voteBtn" class="btn btn-primary btn-block btn-lg">투표하기</button>
+        <button type="button" id="voteBtn" class="btn btn-primary btn-block btn-lg">투 표 하 기</button>
 
         <!-- The Modal -->
         <div id="myModal" class="modal">
           <!-- Modal content -->
           <div class="modal-content">
             <span class="close">&times;</span>
-            <p>투표하기버튼을 클릭했습니다.</p>
-            <button type="submit" id="modalConfirmBtn" class="btn btn-primary">투표완료!</button>
+            <div>
+              <img class="img-fluid"
+                src="images/modImg.png"
+                alt="fluid image">
+            </div>
+            <button type="submit" id="modalConfirmBtn" class="btn btn-primary">닫 기</button>
           </div>
         </div>
 
@@ -403,7 +407,7 @@
       if (frmchk()) {
         modal.style.display = "block";
       } else {
-        alert("적어도 하나의 항목을 선택하셔야 합니다.");
+        alert("두 빵 중 하나를 선택해주세요 !");
       }
     }
 
