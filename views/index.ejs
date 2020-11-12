@@ -101,7 +101,7 @@
 
   .btn-primary {
     color: #000;
-    background-color:#00d17c;
+    background-color: #00d17c;
     border-color: #00d17c;
   }
 
@@ -262,15 +262,15 @@
     height: auto;
   }
 
-   /* floating image */
-   .float-left {
+  /* floating image */
+  .float-left {
     float: left;
   }
 
   .float-right {
     float: right;
   }
-  
+
 
   /*for left-right div*/
   .lr-wrapper {
@@ -282,19 +282,40 @@
     overflow: hidden;
   }
 
-  .ml-12{
+  .ml-12 {
     margin-left: 12%;
   }
 
-  .mr-12{
+  .mr-12 {
     margin-right: 12%;
   }
 
   /*radio*/
-  .rdo{
-    width:15px;
-    height:15px;
-    border:1px;
+  .rdo {
+    width: 15px;
+    height: 15px;
+    border: 1px;
+  }
+
+  @font-face {
+    font-family: 'BMEULJIRO';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/BMEULJIRO.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'TmonMonsori';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/TmonMonsori.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  button,
+  label,
+  div,
+  span {
+    font-family: 'TmonMonsori';
   }
 </style>
 
@@ -303,25 +324,23 @@
   <div class="container-sm">
     <!-- Main image -->
     <div>
-      <img class="img-fluid"
-        src="images/main01.png"
-        alt="fluid image">
+      <img class="img-fluid" src="images/main01.png" alt="fluid image">
     </div>
-    
+
     <!-- form start -->
     <form action="/" method="get">
       <!--choose-->
       <div class="lr-wrapper">
 
         <div class="float-left ml-12">
-        <input class="rdo" type="radio" id="male" name="chosen" value="0">
-        <label for="male">'을지로그인'<span>빵</span></label><br>
+          <input class="rdo" type="radio" id="male" name="chosen" value="0">
+          <label for="male">'을지로그인'<span>빵</span></label><br>
         </div>
 
 
         <div class="float-right mr-12">
-        <input class="rdo" type="radio" id="female" name="chosen" value="1">
-        <label for="female">'을지로그아웃'<span>빵</span></label><br>
+          <input class="rdo" type="radio" id="female" name="chosen" value="1">
+          <label for="female">'을지로그아웃'<span>빵</span></label><br>
         </div>
 
       </div>
@@ -347,12 +366,10 @@
       </div>
 
       <div>
-        <img class="img-fluid"
-          src="images/main02.png"
-          alt="fluid image">
+        <img class="img-fluid" src="images/main02.png" alt="fluid image">
       </div>
 
-      
+
 
       <!-- 모달 버튼 및 모달창 -->
       <div>
@@ -365,9 +382,7 @@
           <div class="modal-content">
             <span class="close">&times;</span>
             <div>
-              <img class="img-fluid"
-                src="images/modImg.png"
-                alt="fluid image">
+              <img class="img-fluid" src="images/modImg.png" alt="fluid image">
             </div>
             <button type="submit" id="modalConfirmBtn" class="btn btn-primary">닫 기</button>
           </div>
